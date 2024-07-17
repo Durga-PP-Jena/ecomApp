@@ -11,8 +11,8 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
     <Stack.Navigator screenOptions={{headerShown:false}}>
-    <Stack.Screen name="auth" component={AuthNavigator} />
     <Stack.Screen name="main" component={MainNavigator} />
+    <Stack.Screen name="auth" component={AuthNavigator} />
     </Stack.Navigator>
     </NavigationContainer>
 )

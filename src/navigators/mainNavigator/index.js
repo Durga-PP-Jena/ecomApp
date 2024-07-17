@@ -6,7 +6,7 @@ import HomeScreen from '../../screens/HomeScreen'
 const Stack = createStackNavigator()
 const MainNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown:false}}>
      <Stack.Screen name="home" component={HomeScreen} />
     </Stack.Navigator>
   )
