@@ -21,4 +21,7 @@ export const icon = {
      hobby:require("../assets/hobby.png"),
      job:require("../assets/job.png"),
      properties:require("../assets/properties.png"),
+     plus:require("../assets/plus.png"),
+     up:require("../assets/up.png"),
+     down:require("../assets/down.png"),
 }

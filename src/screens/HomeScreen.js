@@ -9,11 +9,9 @@ import {
 import React from "react";
 import { widthPercentageToDP as wp } from "react-native-responsive-screen";
 import { icon } from "../utils/Icon";
-// import { ScrollView, TextInput } from "react-native-gesture-handler";
 import ImageCarosel from "../utils/ImageCarosel";
 import ProductCategories from "../utils/ProductCategories";
 import { data, product } from "../utils/Data";
-import ProductDetails from "../utils/ProductDetails";
 import Product from "../utils/Product";
 
 const HomeScreen = () => {
