@@ -1,13 +1,23 @@
 import { StyleSheet, Text, TouchableOpacity, View,Image  } from 'react-native'
 import React from 'react'
-import { widthPercentageToDP, widthPercentageToDP as wp } from 'react-native-responsive-screen'
+import {  widthPercentageToDP as wp } from 'react-native-responsive-screen'
+import { useNavigation } from '@react-navigation/native'
+
 
 const Product = ({data}) => {
+     const navigation = useNavigation()
   return (
     <View style={styles.wrapper}>
      {
           data.map((item)=>{
                return <TouchableOpacity 
+              onPress={()=>navigation.navigate("productDetail",{
+               title:item.title,
+               price:item.price,
+               categories:item.categories,
+               image:item.image,
+               desc:item.desc
+              })}
                style={styles.cardContainer}
                key={item.id}>
                     <Image source={item.image} style={styles.image} />
@@ -33,7 +43,7 @@ const styles = StyleSheet.create({
           flexWrap:"wrap",
           gap:14,
           marginTop:wp(3),
-          marginBottom:100
+          marginBottom:50
      },
      cardContainer:{
           width:wp(42),

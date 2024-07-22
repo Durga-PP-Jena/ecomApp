@@ -4,7 +4,10 @@ import InputField from "../utils/InputField";
 import { widthPercentageToDP } from "react-native-responsive-screen";
 import InputButton from "../utils/InputButton";
 import { icon } from "../utils/Icon";
+import { useNavigation } from "@react-navigation/native";
+
 const LoginScreen = () => {
+  const navigation = useNavigation()
   return (
     <View
       style={{
@@ -21,7 +24,9 @@ const LoginScreen = () => {
       >
         <InputField placeholder="Email" />
         <InputField placeholder="passWord" secureTextEntry={true} />
-        <InputButton label="login" />
+        <InputButton 
+        onPress={()=>navigation.navigate("main")}
+        label="login" />
         <View
           style={{
             flexDirection: "row",
@@ -31,7 +36,7 @@ const LoginScreen = () => {
           }}
         >
           <Text style={{ color: "gray" }}>Don't Have an Account?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.navigate("signup")}>
             <Text style={{ color: "#1394ed" }}>Please Register</Text>
           </TouchableOpacity>
         </View>

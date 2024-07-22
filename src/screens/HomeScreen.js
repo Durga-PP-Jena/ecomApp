@@ -13,6 +13,7 @@ import ImageCarosel from "../utils/ImageCarosel";
 import ProductCategories from "../utils/ProductCategories";
 import { data, product } from "../utils/Data";
 import Product from "../utils/Product";
+import { StatusBar } from "expo-status-bar";
 
 const HomeScreen = () => {
   return (
@@ -22,9 +23,10 @@ const HomeScreen = () => {
         flex: 1,
         backgroundColor: "white",
         paddingHorizontal: wp(5),
-        paddingTop: wp(14),
+        paddingTop: wp(10),
       }}
     >
+      <StatusBar style="auto" />
       <View style={styles.headerContainer}>
         <View style={styles.userSection}>
           <Text style={styles.text}>G</Text>

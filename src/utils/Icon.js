@@ -24,4 +24,13 @@ export const icon = {
      plus:require("../assets/plus.png"),
      up:require("../assets/up.png"),
      down:require("../assets/down.png"),
+     myProduct:require("../assets/myProduct.png"),
+     explore:require("../assets/explore.png"),
+     myIcon:require("../assets/myIcon.png"),
+     logout:require("../assets/logout.png"),
+     home:require("../assets/home.png"),
+     gallery:require("../assets/gallery.png"),
+     post:require("../assets/post.png"),
+     profile:require("../assets/profile.png"),
+     back:require("../assets/back.png"),
 }

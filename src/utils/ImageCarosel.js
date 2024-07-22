@@ -10,7 +10,7 @@ const images = [icon.sale, icon.sale2, icon.sale3, icon.sale4];
 const ImageCarosel = () => {
   return (
     <View style={{
-     width:widthPercentageToDP(90),
+     width:widthPercentageToDP(88),
      height:widthPercentageToDP(50),
      marginVertical:10,
     }}>
