@@ -9,7 +9,10 @@ import React from "react";
 import InputField from "../utils/InputField";
 import { widthPercentageToDP } from "react-native-responsive-screen";
 import InputButton from "../utils/InputButton";
+import { useNavigation } from "@react-navigation/native";
+
 const SignupScreen = () => {
+  const navigation = useNavigation()
   return (
     <View
       style={{
@@ -28,7 +31,9 @@ const SignupScreen = () => {
         <InputField placeholder="lastName" />
         <InputField placeholder="Email" />
         <InputField placeholder="passWord" secureTextEntry={true} />
-        <InputButton label="register" />
+        <InputButton 
+        onPress={()=>navigation.navigate("login")}
+        label="register" />
         <View
           style={{
             flexDirection: "row",
@@ -38,7 +43,7 @@ const SignupScreen = () => {
           }}
         >
           <Text style={{ color: "gray" }}>Already Have an Account?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity  onPress={()=>navigation.navigate("login")}>
             <Text style={{ color: "#1394ed" }}>Please Login</Text>
           </TouchableOpacity>
         </View>

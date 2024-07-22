@@ -1,9 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { widthPercentageToDP as wp } from "react-native-responsive-screen";
-const InputButton = ({label}) => {
+const InputButton = ({label,onPress}) => {
   return (
-    <TouchableOpacity style={styles.btnContianer}>
+    <TouchableOpacity 
+    onPress={()=>onPress()}
+    style={styles.btnContianer}>
       <Text style={styles.labelText}>{label}</Text>
     </TouchableOpacity>
   );
@@ -15,7 +17,7 @@ const styles = StyleSheet.create({
      btnContianer:{
           width:wp(90),
           height:wp(12),
-          backgroundColor:"#7910d9",
+          backgroundColor:"#6E76AA",
           borderRadius:wp(3),
           alignSelf:'center',
           justifyContent:"center",
